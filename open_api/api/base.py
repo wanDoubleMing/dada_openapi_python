@@ -18,7 +18,7 @@ class ApiBaseClass(object):
         获取业务参数
         :return:
         """
-        return self._model.to_json if isinstance(self._model, BaseModel) else ""
+        return self._model.to_json() if isinstance(self._model, BaseModel) else ""
 
 
 

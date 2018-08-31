@@ -47,7 +47,6 @@ class DadaRpcResponse(object):
 
     def to_string(self):
         """
-        打印,没有复写__string__,怕被误会成dict
         :return:
         """
         return json.dumps(self.__dict__)

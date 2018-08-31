@@ -12,13 +12,17 @@ __all__ = [
 
 class DadaApiClient(object):
 
-    def __init__(self, client_config):
+    def __init__(self, client_config, is_user_source_id=True):
         """
         client_config 配置信息
         :param client_config:
         :return:
         """
+        client_config.init_check()
+
         self.__client_config = client_config
+        self.__use_source_id = is_user_source_id
+
 
     def do_rpc(self, api):
         """
@@ -76,7 +80,7 @@ class DadaApiClient(object):
         sign_params["timestamp"] = int(time.time())
         sign_params["format"] = "json"
         sign_params["v"] = "1.0"
-        sign_params["source_id"] = self.__client_config.SOURCE_ID
+        sign_params["source_id"] = self.__client_config.SOURCE_ID if self.__use_source_id else ""
         sign_params["body"] = api.get_business_params()
         return sign_params
 

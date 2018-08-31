@@ -1,7 +1,7 @@
 # -*- encoding: utf8 -*-
 
-from .base import ApiBaseClass
-from .urls import ORDER_ADD_URI
+from open_api.api.base import ApiBaseClass
+from open_api.api.urls import ORDER_ADD_URI
 
 
 __all__ = [
@@ -18,7 +18,7 @@ class OrderAddClass(ApiBaseClass):
         :return:
         """
         super(OrderAddClass, self).__init__()
-        self._mode = model
+        self._model = model
 
 
 

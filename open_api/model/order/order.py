@@ -1,5 +1,5 @@
 # -*- encoding: utf8 -*-
-from .base import BaseModel
+from open_api.model.base import BaseModel
 
 
 class OrderModel(BaseModel):
@@ -19,6 +19,7 @@ class OrderModel(BaseModel):
         self.receiver_lat = None
         self.receiver_lng = None
         self.callback = None
+        self.receiver_phone = None
 
     def field_check(self):
         """
