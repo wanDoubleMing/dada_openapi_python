@@ -3,14 +3,13 @@ Demo of Dada openapi for different development languages (java, php, python)
 </br>
 达达开放平台的接口示例（python版）
 </br>
-
-## 使用说明（可以参照example.py文件）
+## 使用说明（可以参照[example.py](https://github.com/wanDoubleMing/DadaOpenApi/blob/master/open_api/example.py)文件）
 </br>
 ### 1.初始化配置文件
 </br>
 填充app_key,app_secret文件等。
 </br>
-```
+```java
 APP_KEY = ""
 APP_SECRET = ""
 HOST = ""
@@ -20,7 +19,7 @@ SOURCE_ID = ""
 
 ### 2.初始化客户端
 </br>
-```
+```java
 dada_client = DadaApiClient(QAConfig) # 根据环境选择合适的配置对象
 ```
 </br>
@@ -29,7 +28,7 @@ dada_client = DadaApiClient(QAConfig) # 根据环境选择合适的配置对象
 </br>
 注意：新建一个模型的时候，必须实现```field_check()```方法，用来作必填参数的校验。
 </br>
-```
+```java
 # 新增订单模型
 order_model = OrderModel()
 order_model.shop_no = "11664071"
@@ -48,14 +47,14 @@ order_model.callback = ""
 
 ### 4.初始化接口类
 </br>
-```
+```java
 order_add_api = OrderAddClass(model=order_model)
 ```
 </br>
 
 ### 5.rpc请求
 </br>
-```
+```java
 result = dada_client.do_rpc(api=order_add_api)
 print result.to_string()
 ```
