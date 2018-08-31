@@ -77,7 +77,7 @@ def merchant_add_example():
     注册商户示例
     :return:
     """
-    # 1.初始化客户端
+    # 1.初始化客户端,注册商户的时候不需要source_id
     dada_client = DadaApiClient(QAConfig, is_user_source_id=False)
 
     # 2.选择一个api类,同时初始化api参数model
