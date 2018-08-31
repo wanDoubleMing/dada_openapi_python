@@ -9,6 +9,7 @@ Demo of Dada openapi for different development languages (java, php, python)
 </br>
 填充app_key,app_secret文件等。
 </br>
+
 ```java
 APP_KEY = ""
 APP_SECRET = ""
@@ -19,6 +20,7 @@ SOURCE_ID = ""
 
 ### 2.初始化客户端
 </br>
+
 ```java
 dada_client = DadaApiClient(QAConfig) # 根据环境选择合适的配置对象
 ```
@@ -28,6 +30,7 @@ dada_client = DadaApiClient(QAConfig) # 根据环境选择合适的配置对象
 </br>
 注意：新建一个模型的时候，必须实现```field_check()```方法，用来作必填参数的校验。
 </br>
+
 ```java
 # 新增订单模型
 order_model = OrderModel()
@@ -47,6 +50,7 @@ order_model.callback = ""
 
 ### 4.初始化接口类
 </br>
+
 ```java
 order_add_api = OrderAddClass(model=order_model)
 ```
@@ -54,6 +58,7 @@ order_add_api = OrderAddClass(model=order_model)
 
 ### 5.rpc请求
 </br>
+
 ```java
 result = dada_client.do_rpc(api=order_add_api)
 print result.to_string()
