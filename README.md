@@ -28,7 +28,7 @@ dada_client = DadaApiClient(QAConfig) # 根据环境选择合适的配置对象
 
 ### 3.初始化数据模型类
 </br>
-注意：新建一个模型的时候，必须实现```field_check()```方法，用来作必填参数的校验。
+注意：新建一个模型的时候，必须实现field_check()方法，用来作必填参数的校验。
 </br>
 
 ```python
