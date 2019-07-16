@@ -9,8 +9,8 @@
 class BaseConfig(object):
 
     # 开发者在线上或测试环境的app_key与app_secret是一样
-    APP_KEY = ""
-    APP_SECRET = ""
+    APP_KEY = "dada356dcb003156a5c"
+    APP_SECRET = "f066a6387b14efcf0e30751e755dbc8b"
     HOST = ""
 
     @classmethod
@@ -34,6 +34,6 @@ class QAConfig(BaseConfig):
 
 class OnlineConfig(BaseConfig):
 
-    HOST = "https://newopen.imdada.cn"
-    SOURCE_ID = ""
+    HOST = "http://newopen.imdada.cn"
+    SOURCE_ID = "9646"
 
