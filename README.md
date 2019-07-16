@@ -1,7 +1,7 @@
 # DadaOpenApi
 Demo of Dada openapi for different development languages (java, php, python)
 </br>
-达达开放平台的接口示例（python版）
+达达开放平台的接口示例（python版） ***[查看接口文档](http://newopen.imdada.cn/#/development/file/index?_k=isjh9o)***
 </br>
 ## 使用说明（可以参照[example.py](https://github.com/wanDoubleMing/DadaOpenApi/blob/master/open_api/example.py)文件）
 </br>
@@ -28,7 +28,7 @@ dada_client = DadaApiClient(QAConfig) # 根据环境选择合适的配置对象
 
 ### 3.初始化数据模型类
 </br>
-注意：新建一个模型的时候，必须实现```field_check()```方法，用来作必填参数的校验。
+注意：新建一个模型的时候，必须实现field_check()方法，用来作必填参数的校验。
 </br>
 
 ```python
